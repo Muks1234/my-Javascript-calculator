@@ -1,0 +1,184 @@
+#outer-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#calculator{
+  display:grid;
+  background-color: black;
+  color:white;
+  width: 417px;
+  padding: 5px;
+  border: 2px solid #47476b;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height:499px;
+  grid-template-areas: 
+      "display display display display"
+      "AC AC divide multiply"
+      "no7 no8 no9 minus"
+      "no4 no5 no6 plus"
+      "no1 no2 no3 equals"
+      "zero zero decimal equals";
+}
+
+.numbers{
+  background-color: #4d4d4d;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 25px;
+  border: 1px solid black;
+}
+
+.numbers:hover{
+    color: black;
+    outline: .05em solid grey;
+    z-index: 3;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 25px;
+}
+.operators{
+  background-color: rgb(102, 102, 102);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 25px;
+  border: 1px solid black;
+}
+.operators:hover{
+  color: black;
+  outline: .05em solid grey;
+  z-index: 3;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 25px;
+}
+
+#clear{
+  background: rgb(172, 57, 57);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 25px;
+  border: 1px solid black;
+}
+#clear:hover{
+  color: black;
+  outline: .05em solid grey;
+  z-index: 3;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 25px;
+}
+#equals{
+  background: rgb(0, 68, 102);
+  grid-area: equals;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 25px;
+  border: 1px solid black;
+}
+#equals:hover{
+  color: black;
+  outline: .05em solid grey;
+  z-index: 3;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 25px;
+}
+
+#display{
+  grid-area: display;
+  display: grid;
+  grid-template-rows: 40%;
+  padding: 3px;
+  font-size: 29px;
+  font-family: digital;
+  color: white;
+  text-align: right;
+  line-height: 35px;
+  font-family: 'Orbitron';
+  align-content: flex-end;
+  padding-bottom: 15px;
+}
+
+
+#clear{
+  grid-area: AC;
+  font-size: 25px;
+}
+
+#zero{
+  grid-area: zero;
+  font-size: 25px;
+}
+#one{
+  grid-area: no1;
+}
+#two{
+  grid-area:no2;
+}
+#three{
+  grid-area:no3;
+}
+#four{
+  grid-area:no4;
+}
+#five{
+  grid-area:no5;
+}
+#six{
+  grid-area:no6;
+}
+#seven{
+  grid-area:no7;
+}
+#eight{
+  grid-area:no8;
+}
+#nine{
+  grid-area:no9;
+}
+#decimal{
+  grid-area:decimal;
+}
+#add{
+  grid-area:plus;
+}
+#subtract{
+  grid-area:minus;
+}
+#multiply{
+  grid-area:multiply;
+}
+#divide{
+  grid-area:divide;
+}
+
+button {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+  appearance: none;
+  text-align: left;
+  color: white;
+}
+
+.is-depressed{
+  background-color: aliceblue;
+  color:black;
+}
